@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src='https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js' integrity='sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=' crossorigin='anonymous'></script>
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <h1 id="welcome">Weather Dashboard</h1>
+    <form id="searchForm">
+        <label for="location">Enter your location:</label>
+        <input type="text" name="location" id="location">
+        <input type="button" value="Search" id="searchBtn">
+    </form>
+    <div id="weatherContainer">
+        <h2 id="weatherDisplayTitle">Displaying Weather for: <span id="weatherLocation"></span> </h2>
+        <div id="weatherBoxes">
+            <div class="weatherBox">
+                <ul id="wd0">
+                    <li class="wthrLabel">Date</li>
+                        <li id="day0Date" class="wthrDisplay">Today</li>
+                    <li class="wthrLabel">Temperature</li>
+                        <li id="day0Temp" class="wthrDisplay">Hot</li>
+                    <li class="wthrLabel">Humidity</li>
+                        <li id="day0Hum" class="wthrDisplay">Humid</li>
+                    <li class="wthrLabel">Wind Speed</li>
+                        <li id="day0Wind" class="wthrDisplay">Fast</li>
+                </ul>
+            </div>
+            <div class="weatherBox">
+                <ul id="wd1">
+                    <li class="wthrLabel">Date</li>
+                        <li id="day1Date" class="wthrDisplay">Today</li>
+                    <li class="wthrLabel">Temperature</li>
+                        <li id="day1Temp" class="wthrDisplay">Hot</li>
+                    <li class="wthrLabel">Humidity</li>
+                        <li id="day1Hum" class="wthrDisplay">Humid</li>
+                    <li class="wthrLabel">Wind Speed</li>
+                        <li id="day1Wind" class="wthrDisplay">Fast</li>
+                </ul>
+            </div>
+            <div class="weatherBox">
+                <ul id="wd2">
+                    <li class="wthrLabel">Date</li>
+                        <li id="day2Date" class="wthrDisplay">Today</li>
+                    <li class="wthrLabel">Temperature</li>
+                        <li id="day2Temp" class="wthrDisplay">Hot</li>
+                    <li class="wthrLabel">Humidity</li>
+                        <li id="day2Hum" class="wthrDisplay">Humid</li>
+                    <li class="wthrLabel">Wind Speed</li>
+                        <li id="day2Wind" class="wthrDisplay">Fast</li>
+                </ul>
+            </div>
+            <div class="weatherBox">
+                <ul id="wd3">
+                    <li class="wthrLabel">Date</li>
+                        <li id="day3Date" class="wthrDisplay">Today</li>
+                    <li class="wthrLabel">Temperature</li>
+                        <li id="day3Temp" class="wthrDisplay">Hot</li>
+                    <li class="wthrLabel">Humidity</li>
+                        <li id="day3Hum" class="wthrDisplay">Humid</li>
+                    <li class="wthrLabel">Wind Speed</li>
+                        <li id="day3Wind" class="wthrDisplay">Fast</li>
+                </ul>
+            </div>
+            <div class="weatherBox">
+                <ul id="wd4">
+                    <li class="wthrLabel">Date</li>
+                        <li id="day4Date" class="wthrDisplay">Today</li>
+                    <li class="wthrLabel">Temperature</li>
+                        <li id="day4Temp" class="wthrDisplay">Hot</li>
+                    <li class="wthrLabel">Humidity</li>
+                        <li id="day4Hum" class="wthrDisplay">Humid</li>
+                    <li class="wthrLabel">Wind Speed</li>
+                        <li id="day4Wind" class="wthrDisplay">Fast</li>
+                </ul>
+            </div>
+            <div class="weatherBox">
+                <ul id="wd5">
+                    <li class="wthrLabel">Date</li>
+                        <li id="day5Date" class="wthrDisplay">Today</li>
+                    <li class="wthrLabel">Temperature</li>
+                        <li id="day5Temp" class="wthrDisplay">Hot</li>
+                    <li class="wthrLabel">Humidity</li>
+                        <li id="day5Hum" class="wthrDisplay">Humid</li>
+                    <li class="wthrLabel">Wind Speed</li>
+                        <li id="day5Wind" class="wthrDisplay">Fast</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/script.js"></script>
+</body>
+</html>
