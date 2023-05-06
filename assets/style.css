@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightblue;
+}
+
+#welcome {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-align: center;
+    font-size: calc(24px + 3vw);
+}
+
+#searchForm {
+    display: flex;
+    background-color: lightgray;
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    font-size: calc(12px + 1vw);
+}
+
+#searchBtn {
+    padding: 2px;
+}
+
+#weatherContainer {
+    display: block;
+    margin: 5vw;
+    margin-top: 30px;
+}
+#weatherContainer h2 {
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+#weatherBoxes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.weatherBox {
+    background-color: white;
+    width: 25vw;
+    height: auto;
+    font-size: 20px;
+}
+
+.weatherBox ul{
+    list-style: none;
+}
+
+.wthrLabel {
+    background-color: beige;
+    padding: 10px
+}
+
+.wthrDisplay {
+    padding: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+    .weatherBox {
+        background-color: rosybrown;
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .weatherBox {
+        background-color: antiquewhite;
+        width: 80vw;
+    }
+}
