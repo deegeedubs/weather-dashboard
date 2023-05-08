@@ -27,7 +27,8 @@ function getCoord(){
 
 // Function to pull up weather data of 
 function pullWeatherData(latitude, longitude){
-    var weatherApi = 'http://api.openweathermap.org/data/2.5/forecast?lat='+ latitude + '&lon=' + longitude + '&appid=27f7efbf24b166de6282d4fd04f6501d'
+    var weatherApi = 'http://api.openweathermap.org/data/2.5/forecast/?lat='+ latitude + '&lon=' + longitude + '&appid=27f7efbf24b166de6282d4fd04f6501d&units=imperial'
+    console.log(weatherApi);
     fetch(weatherApi)
         .then(function(response){
             if (response.ok) {
@@ -44,19 +45,15 @@ function pullWeatherData(latitude, longitude){
 // Function to take pulled weather data and send it to HTML
 function displayWeatherData(forecast) {
     $('#weatherLocation').text(cityName);
-    // Today
-    var fiveDay = {
-        0: forecast[0],
-        1: forecast.slice(1,9),
-        2: forecast.slice(9,17),
-        3: forecast.slice(17,25),
-        4: forecast.slice(25,33),
-        5: forecast.slice(33)
-    }
-    console.log(fiveDay);
-    for (var i = 0; i < fiveDay.length; i++) {
-        console.log($('#day'+i+'Date'));
-    }
+    console.log(forecast);
+    $('.weatherBox').each(function(index){
+        console.log(index);
+        $(this).children('ul').children().children('.dayDate').text(dayjs.unix(forecast[index*8].dt).format('ddd, MMMM DD,  YYYY'));
+        $(this).children('ul').children().children('.dayTemp').text(Math.floor(forecast[index*8].main.temp) + ' F');
+        $(this).children('ul').children().children('.dayHum').text(Math.floor(forecast[index*8].main.humidity) + '%');
+        $(this).children('ul').children().children('.dayWind').text(Math.floor(forecast[index*8].wind.speed) + ' mph');
+        $(this).children('img').attr('src', 'https://openweathermap.org/img/wn/' + forecast[index*8].weather[0].icon + '@2x.png');
+    })
     
     weatherContainer.style.display = 'block';
 }
