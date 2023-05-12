@@ -5,6 +5,7 @@ var lon = '0';
 var cityName;
 
 var searchHistory = JSON.parse(localStorage.getItem('search-history'));
+
 if (searchHistory == null){
     searchHistory = [];
 }
@@ -13,6 +14,7 @@ var weatherContainer = document.querySelector('#weatherContainer');
 
 var historyList = document.querySelectorAll(".histItem");
 
+// pull localStorage for search history
 function setHistory(){
     if (localStorage.getItem('search-history')){
         for (var i = 0; i < historyList.length; i++){
@@ -75,6 +77,7 @@ function displayWeatherData(forecast) {
     weatherContainer.style.display = 'block';
 }
 
+// save search in localStorage for search history
 function saveSearch() {
     if (searchHistory.length >= 3 ) {
         searchHistory.pop()
