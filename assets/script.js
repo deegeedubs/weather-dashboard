@@ -82,9 +82,9 @@ function saveSearch() {
     if (searchHistory.length >= 3 ) {
         searchHistory.pop()
     }
-    console.log(searchHistory);
+
     searchHistory.unshift(zipEntry.value.trim());
-    console.log(searchHistory);
+
     localStorage.setItem('search-history', JSON.stringify(searchHistory));
     setHistory();
 }
