@@ -3,6 +3,7 @@ var zipEntry = document.querySelector("#location");
 var lat = '0';
 var lon = '0';
 var cityName;
+
 var searchHistory = JSON.parse(localStorage.getItem('search-history'));
 if (searchHistory == null){
     searchHistory = [];
