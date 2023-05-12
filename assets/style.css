@@ -36,7 +36,7 @@ body {
     display: flex;
     background-color: rosybrown;
     padding: 1em;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 0.5em;
     font-size: calc(12px + 1vw);
@@ -49,6 +49,18 @@ body {
 
 #searchBtn {
     padding: 2px;
+}
+
+#search-history h2{
+    font-size: calc(12px + 1vw);
+}
+
+#search-history ul {
+    list-style: none;
+}
+
+#search-history li {
+    display: inline-block;
 }
 
 #weatherContainer {
