@@ -4,16 +4,21 @@ var lat = '0';
 var lon = '0';
 var cityName;
 var searchHistory = JSON.parse(localStorage.getItem('search-history'));
+if (searchHistory == null){
+    searchHistory = [];
+}
 
 var weatherContainer = document.querySelector('#weatherContainer');
 
 var historyList = document.querySelectorAll(".histItem");
 
 function setHistory(){
-    for (var i = 0; i < historyList.length; i++){
-        var updateTo = JSON.parse(localStorage.getItem('search-history'));
-        if (updateTo[i]){
-            historyList[i].innerHTML = updateTo[i];
+    if (localStorage.getItem('search-history')){
+        for (var i = 0; i < historyList.length; i++){
+            var updateTo = JSON.parse(localStorage.getItem('search-history'));
+            if (updateTo[i]){
+                historyList[i].innerHTML = updateTo[i];
+            }
         }
     }
 }
@@ -70,7 +75,7 @@ function displayWeatherData(forecast) {
 }
 
 function saveSearch() {
-    if (searchHistory.length >= 3) {
+    if (searchHistory.length >= 3 ) {
         searchHistory.pop()
     }
     console.log(searchHistory);
