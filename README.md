@@ -1,4 +1,4 @@
-# weather-dashboard
+# Weather Dashboard
 
 ## Description
 This site will display the 5 day weather forecast based on a zip-code input.
@@ -15,7 +15,7 @@ This site will display the 5 day weather forecast based on a zip-code input.
 
 Link to deployed site:
 
-[https://deegeedubs.github.io/daily-work-planner/](https://deegeedubs.github.io/weather-dashboard/)
+https://deegeedubs.github.io/weather-dashboard/
 
 ![Screenshot 2023-05-11 at 11 26 19 PM](https://github.com/deegeedubs/weather-dashboard/assets/128939200/dc4ea133-ab53-4c41-b42f-39439d0f534d)
 
