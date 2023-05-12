@@ -32,7 +32,7 @@ searchButton.on('click', saveSearch);
 
 // Function to get latitude and longitude of entered zip code
 function getCoord(){
-    var coordApi = 'http://api.openweathermap.org/geo/1.0/zip?zip=' + zipEntry.value.trim() + '&appid=27f7efbf24b166de6282d4fd04f6501d';
+    var coordApi = 'https://api.openweathermap.org/geo/1.0/zip?zip=' + zipEntry.value.trim() + '&appid=27f7efbf24b166de6282d4fd04f6501d';
     fetch(coordApi)
         .then(function(response){
             if (response.ok) {
@@ -49,7 +49,7 @@ function getCoord(){
 
 // Function to pull up weather data of 
 function pullWeatherData(latitude, longitude){
-    var weatherApi = 'http://api.openweathermap.org/data/2.5/forecast/?lat='+ latitude + '&lon=' + longitude + '&appid=27f7efbf24b166de6282d4fd04f6501d&units=imperial'
+    var weatherApi = 'https://api.openweathermap.org/data/2.5/forecast/?lat='+ latitude + '&lon=' + longitude + '&appid=27f7efbf24b166de6282d4fd04f6501d&units=imperial'
     fetch(weatherApi)
         .then(function(response){
             if (response.ok) {
